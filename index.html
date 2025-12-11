@@ -5,9 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="window" style="width: 260px">
+        <div class="title-bar">
+            <div class="title-bar-text">Calculator</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Restore"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="displayBox">
+                0.
+            </div>
+            <div id="buttonPanel">
+                <div class="memButtons">
+                    <div id="memBox"></div>
+                    <button class="memButton">MC</button>
+                    <button class="memButton">MR</button>
+                    <button class="memButton">MS</button>
+                    <button class="memButton">M+</button>
+                </div>
+                <div class="calcButtons">
+                    <div id="topRow">
+                        <button class="topButton">Backspace</button>
+                        <button class="topButton">CE</button>
+                        <button class="topButton">C</button>
+                    </div>
+                    <div id="secondRow">
+                        <button class="numButton">7</button>
+                        <button class="numButton">8</button>
+                        <button class="numButton">9</button>
+                        <button class="opButton">/</button>
+                        <button class="numButton">sqrt</button>
+                    </div>
+                    <div id="thirdRow">
+                        <button class="numButton">4</button>
+                        <button class="numButton">5</button>
+                        <button class="numButton">6</button>
+                        <button class="opButton">*</button>
+                        <button class="opButton">%</button>
+                    </div>
+                    <div id="fourthRow">
+                        <button class="numButton">1</button>
+                        <button class="numButton">2</button>
+                        <button class="numButton">3</button>
+                        <button class="opButton">&hyphen;</button>
+                        <button class="numButton">1/x</button>
+                    </div>
+                    <div id="fifthRow">
+                        <button class="numButton">0</button>
+                        <button class="numButton">+/&hyphen;</button>
+                        <button class="numButton">&period;</button>
+                        <button class="opButton">+</button>
+                        <button class="opButton">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

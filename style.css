@@ -1,2 +1,118 @@
 /* Simple Calculator Stylesheet */
 /* By Kyle Harder */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.topButton {
+    color: red;
+    min-width: 35px;
+    width: 60px;
+    height: 25px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.window-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.memButton {
+    color: red;
+    min-width: 35px;
+    width: 35px;
+}
+
+button.opButton {
+    color: red;
+    min-width: 30px;
+    width: 32px;
+    padding: 1px;
+}
+
+button.numButton {
+    color: blue;
+    min-width: 30px;
+    width: 32px;
+    padding: 1px;
+}
+
+.displayBox {
+    height: 23px;
+    width:98%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 255, 0.5);
+    text-align: right;
+    line-height: 23px;
+}
+
+#buttonPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-end;
+    padding-top: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.memButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 12px;
+}
+
+#memBox {
+    width: 23px;
+    height: 23px;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+    margin-bottom: 4px;
+}
+
+.calcButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+    row-gap: 6px;
+}
+
+#topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    padding-bottom: 4px;
+}
+
+#secondRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#thirdRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fourthRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#fifthRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
