@@ -45,44 +45,51 @@ function operate (firstNum, mathOp, secondNum) {
     }
 }
 
-const numButton = document.querySelector(".numButton");
-const opButton = document.querySelector(".opButton");
+const numButtons = document.querySelectorAll(".numButton");
+const opButtons = document.querySelectorAll(".opButton");
 const equalButton = document.querySelector(".equalButton");
+const topButtons = document.querySelectorAll(".topButton");
+const expoButtons = document.querySelectorAll(".expoButton");
+const memButtons = document.querySelectorAll(".memButton");
+const clearButton = document.querySelector(".clearButton");
 
-numButton.addEventListener("click", () => {
-     const buttonValue = this.value;
-    if (mathOp === null) {
-        numString = "" + firstNum + this.value;
-        firstNum = Number(numString);
-        numString = null;
-        displaybox.textContent = firstNum;
-    }
-    else {
-        numString = "" + secondNum + this.value;
-        secondNum = Number(numString);
-        numString = null;
-        displaybox.textContent = firstNum + " " + mathOp + " " + secondNum;
-    }
+numButtons.forEach(numButton => {
+    numButton.addEventListener("click", (e) => {
+        if (mathOp === null) {
+            numString = "" + firstNum + e.target.innerText;
+            firstNum = Number(numString);
+            numString = null;
+            displaybox.textContent = firstNum;
+        }
+        else {
+            numString = "" + secondNum + e.target.innerText;
+            secondNum = Number(numString);
+            numString = null;
+            displaybox.textContent = firstNum + " " + mathOp + " " + secondNum;
+        }
+    })
 })
 
-opButton.addEventListener("click", () => {
-    if (mathOp === null) {
-        mathOp = this.value;
-        displaybox.textContent = firstNum + " " + mathOp;
-    }
-    else {
-        tempNum = operate(firstNum, mathOp, secondNum);
-        if (tempNum != "div0err") {
-            displaybox.textContent = tempNum;
-            secondNum = 0;
-            firstNum = tempNum;
-            mathOp = this.value;
+opButtons.forEach(opButton => {
+    opButton.addEventListener("click", (e) => {
+        if (mathOp === null) {
+            mathOp = e.target.innerText;
             displaybox.textContent = firstNum + " " + mathOp;
         }
         else {
-            displaybox.textContent = "Divide by zero error";
+            tempNum = operate(firstNum, mathOp, secondNum);
+            if (tempNum != "div0err") {
+                displaybox.textContent = tempNum;
+                secondNum = 0;
+                firstNum = tempNum;
+                mathOp = e.target.innerText;
+                displaybox.textContent = firstNum + " " + mathOp;
+            }
+            else {
+                displaybox.textContent = "Divide by zero error";
+            }
         }
-    }
+    })
 })
 
 equalButton.addEventListener("click", () => {
@@ -93,4 +100,32 @@ equalButton.addEventListener("click", () => {
     else {
         displaybox.textContent = "Sigh... You cannot divide by zero";
     }
+})
+
+topButtons.forEach(topButton => {
+    topButton.addEventListener("click", (e) => {
+        alert("Feature not implimented");
+    })
+})
+
+expoButtons.forEach(expoButton => {
+    expoButton.addEventListener("click", (e) => {
+        alert("Feature not implimented");
+    })
+})
+
+memButtons.forEach(memButton => {
+    memButton.addEventListener("click", (e) => {
+        alert("Feature not implimented");
+    })
+})
+
+clearButton.addEventListener("click", (e) => {
+    firstNum = 0;
+    secondNum = 0;
+    tempNum = 0;
+    mathOp = null;
+    displayNum = 0;
+    numString = null;
+    displaybox.textContent = "0.";
 })
