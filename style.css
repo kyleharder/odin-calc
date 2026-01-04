@@ -2,8 +2,24 @@
 /* By Kyle Harder */
 
 body {
+    display: flex;
     margin: 0;
     padding: 0;
+    background-image: url("xpbackground.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: #4da409;
+    align-items: center;
+    justify-content: center;
+}
+
+.siteContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15%;
+    height: 100vh;
+    width: 100%;
 }
 
 .topButton {
